@@ -1,0 +1,26 @@
+site_name: Mi-App-Web-GCA
+site_url: https://agalan8.github.io/mi-app-web-GCA/
+site_description: Documentación del proyecto Mi-App-Web-GCA
+site_author: Alejandro Galan Caballero
+
+# Configuración de la navegación
+nav:
+  - Home: index.md
+  - Instalación: instalacion.md
+  - Uso: uso.md
+  - Contribuciones: contribuciones.md
+  - Licencia: licencia.md
+
+# Configuración del tema (puedes cambiarlo si prefieres otro tema)
+theme:
+  name: mkdocs
+
+# Plugins (opcional, si deseas habilitar funcionalidades extra)
+plugins:
+  - search
+
+# Páginas adicionales (opcional, si tienes otras páginas adicionales)
+markdown_extensions:
+  - toc:
+      permalink: true
+
