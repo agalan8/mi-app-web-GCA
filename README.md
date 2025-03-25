@@ -110,6 +110,31 @@ Future<String?> getExternalID() async {
 ---
 **Con este código, FlutterFlow puede obtener el identificador único del usuario en OneSignal.**
 
+
+# Explicación del Actions Flow en HomePage
+
+En el **actions flow** del **HomePage** hay creado un flujo para cuando se carga la **APK** con el evento **"On Page Load"**. Este flujo tiene dos acciones.
+
 ![Captura HomePage Flow](https://i.imgur.com/3yBil60.png)
+
+1. **Primera acción: Llamada a la customAction "getExternalID"**  
+   La primera acción llama a la **customAction** `getExternalID`, que devuelve como output la **id externa del usuario OneSignal**. Esta salida se guarda en la variable **externalID**.
+
+![Captura HomePage Flow - Acción 1](https://imgur.com/7SqO5b5.png)
+
+
+3. **Segunda acción: Seteo de la variable global "finalURL"**  
+   La segunda acción **setea** el valor de la variable global de FlutterFlow **"finalURL"**. Este valor se establece mediante un **"Text Combination"** combinando el **String** `https://my.rentel.pro/externalID=` seguido del **externalID** que devuelve la acción anterior.
+
+![Captura HomePage Flow - Acción 2](https://imgur.com/7SqO5b5.png)
+
+![Captura HomePage Flow - Acción 2](https://imgur.com/U5Oq8mQ.png)
+
+---
+**Resultado final:**  
+El flujo asegura que la **finalURL** se construya dinámicamente al cargar la página, combinando una URL base con el `externalID` obtenido.
+
+
+
 
 
