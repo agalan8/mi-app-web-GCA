@@ -109,6 +109,3 @@ Future<String?> getExternalID() async {
 
 ---
 **Con este código, FlutterFlow puede obtener el identificador único del usuario en OneSignal.**
-
-
-![alt text](image.png)
